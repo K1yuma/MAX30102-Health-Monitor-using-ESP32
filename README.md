@@ -4,7 +4,7 @@
 [![Platform: ESP32](https://img.shields.io/badge/Platform-ESP32-blue.svg)](https://www.espressif.com/en/products/socs/esp32)
 [![Framework: React](https://img.shields.io/badge/Framework-React-61dafb.svg)](https://reactjs.org/)
 
-Một giải pháp IoT full-stack dành cho việc theo dõi các chỉ số sinh lý theo thời gian thực. Hệ thống tích hợp xử lý tín hiệu cảm biến ở mức phần cứng, kiến trúc firmware song hành và bảng điều khiển web đồng bộ hóa đám mây để cung cấp thông tin sức khỏe tức thời.
+Dự án IoT dành cho việc theo dõi các chỉ số sinh lý theo thời gian thực. Hệ thống tích hợp xử lý tín hiệu cảm biến ở mức phần cứng, firmware song hành và bảng điều khiển web đồng bộ hóa đám mây để cung cấp thông tin sức khỏe tức thời.
 
 ---
 
@@ -62,12 +62,12 @@ Một giải pháp IoT full-stack dành cho việc theo dõi các chỉ số sin
 
 ## 🚀 Đặc Điểm Kỹ Thuật Nổi Bật
 
-### ⚡ Kỹ Thuật Firmware (ESP32)
+### ⚡ Firmware (ESP32)
 - **Thực Thi Đa Nhân (Multi-Core):** Sử dụng **FreeRTOS** để gán các tác vụ quan trọng vào các nhân cụ thể (Nhân 0 cho Mạng/MQTT, Nhân 1 cho Sensor I/O), đảm bảo thời gian duy trì dữ liệu liên tục 100%.
 - **Xử Lý Tín Hiệu Cảm Biến:** Triển khai thuật toán DFRobot cho cảm biến **MAX30102**, tùy chỉnh lấy mẫu trung bình (sample averaging) và độ rộng xung để đạt được tín hiệu ổn định ở mức y tế.
 - **Kết Nối Linh Hoạt:** Tích hợp **WiFiManager** cho cấu hình WiFi qua captive portal và logic tự động kết nối lại MQTT/WiFi.
 
-### 🌐 Kiến Trúc Web & Cloud
+### 🌐 Web & Cloud
 - **Pub/Sub Thời Gian Thực:** Sử dụng **MQTT** (HiveMQ) để truyền tải dữ liệu với độ trễ cực thấp (dưới 100ms) giữa phần cứng và frontend.
 - **Lưu Trữ Bất Đồng Bộ:** Đồng bộ hóa dữ liệu với **Firebase Firestore** để phân tích xu hướng mà không làm ảnh hưởng đến hiệu suất giao diện (UI thread).
 - **Trải Nghiệm Người Dùng (UX) Động:** Dashboard React đáp ứng tốt, tích hợp các đồng hồ đo dạng SVG, biểu đồ Chart.js thời gian thực và hệ thống cảnh báo bằng âm thanh.
