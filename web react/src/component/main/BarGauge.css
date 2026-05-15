@@ -1,0 +1,33 @@
+.bar-gauge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bar-gauge {
+  width: 200px;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-gauge-fill {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.5s ease-in-out;
+}
+
+.bar-gauge-label {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.bar-gauge-value {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}

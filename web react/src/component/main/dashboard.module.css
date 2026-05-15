@@ -1,0 +1,426 @@
+.wrapper {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+}
+
+.dashboard {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 3.5em; /* Large font size */
+  font-weight: 700; /* Bold text */
+  color: #1c2a48; /* Dark blue color for prominence */
+  margin-bottom: 30px; /* Space below the title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+/* Low health vignette effect */
+.lowHealthVignette::before {
+  content: '';
+  position: fixed; /* Use fixed to cover the entire viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Allow interaction with elements beneath */
+  background: radial-gradient(
+    ellipse at center,
+    transparent 70%,
+    rgba(255, 0, 0, 0.3) 100%
+  ); /* Red vignette */
+  animation: lowHealthPulse 2s infinite alternate;
+  z-index: 999; /* Ensure it's above most content but below modals/menus */
+}
+
+@keyframes lowHealthPulse {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1c2a48;
+    margin: 0;
+}
+
+.header p {
+    font-size: 18px;
+    color: #5a6a85;
+    margin-top: 10px;
+}
+
+.statsContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center;
+    gap: 20px; /* Reduced gap for better mobile fit */
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.statCard {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px; /* Adjusted padding */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    align-items: center;
+    flex: 1; /* Allow cards to grow and shrink */
+    min-width: 280px; /* Minimum width for cards before wrapping */
+    max-width: 45%; /* Max width to allow two cards per row on larger screens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Flicker red effect for individual stat cards */
+.flickerRed {
+  animation: flickerRedAnimation 1s infinite alternate;
+}
+
+@keyframes flickerRedAnimation {
+  0% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); background-color: #ffe6e6; }
+  100% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.8); background-color: #ffcccc; }
+}
+
+.statCard h3 {
+    margin: 0 0 20px 0;
+    font-size: 26px;
+    color: #3c4a68;
+    font-weight: 600;
+}
+
+.manualInputGroup {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Increased gap for better spacing */
+}
+
+.manualInputGroup label {
+    font-size: 16px;
+    color: #5a6a85;
+    font-weight: 500;
+}
+
+.manualInputGroup input {
+    width: 80px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    font-size: 16px;
+}
+
+.rangeInputGroup {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.rangeInputGroup input {
+    width: 60px; /* Smaller input for range values */
+}
+
+.debugRangeInput {
+  width: 80px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.rangeInputGroup label {
+    font-size: 14px;
+    color: #7a8a9a;
+}
+
+
+
+.sensorButton {
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sensorButton.on {
+    background: linear-gradient(45deg, #29b6f6, #03a9f4);
+}
+
+.sensorButton.on:hover {
+    box-shadow: 0 8px 25px rgba(3, 169, 244, 0.3);
+}
+
+.sensorButton.off {
+    background: linear-gradient(45deg, #ef5350, #e53935);
+}
+
+
+
+.sensorButton.off:hover {
+    box-shadow: 0 8px 25px rgba(229, 57, 53, 0.3);
+}
+
+.debugPanel {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dashboardOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dashboardContent {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 800px;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.dashboardContent h2 {
+  text-align: center;
+  color: #1c2a48;
+  margin-bottom: 20px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #5a6a85;
+}
+
+.closeButton:hover {
+  color: #1c2a48;
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.toggleButton {
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggleButton.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.toggleButton:hover:not(.active) {
+  background-color: #e7f3ff;
+}
+
+.dataListContainer {
+  margin-top: 20px;
+}
+
+.dataListContainer h3 {
+  color: #3c4a68;
+  margin-bottom: 15px;
+}
+
+.dataGraphContainer {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center; /* Center content within the wrapper */
+}
+
+.summarySection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fullWidthSection {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.menuSection {
+  width: 100%;
+  margin-bottom: 20px; /* Add some space below the menu */
+}
+
+.dataList {
+  list-style: none;
+  padding: 0;
+}
+
+.dataListItem {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dataListItem p {
+  margin: 0;
+  color: #333;
+  font-size: 15px;
+}
+
+.dataListItem strong {
+  color: #1c2a48;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dangerText {
+  color: #dc3545;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .pageTitle {
+    font-size: 2.5em; /* Smaller font size for mobile */
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+
+  .statsContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .statCard {
+    max-width: 90%; /* Allow cards to take up more width on small screens */
+    padding: 20px;
+  }
+
+  .statCard h3 {
+    font-size: 22px;
+  }
+
+  .sensorButton {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .debugPanel {
+    width: 100%; /* Override inline style */
+    max-width: none; /* Override inline style */
+    padding: 15px;
+  }
+
+  .debugPanel h4 {
+    font-size: 18px;
+  }
+  
+  .debugPresetButton {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .debugPresetButton.activePreset {
+    border: 2px solid #007bff; /* Default active border */
+  }
+  
+  .debugPresetButton:nth-child(1).activePreset { /* Specific for 'normal' button */
+    border-color: #007bff;
+  }
+  
+  .debugPresetButton:nth-child(2).activePreset { /* Specific for 'danger' button */
+    border-color: #dc3545;
+  }
+  
+  .debugPanel button {
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+  }
+  .rangeInputGroup input {
+    width: 50px !important;
+    padding: 6px !important;
+  }
+
+  .dashboardContent {
+    width: 95%;
+    padding: 20px;
+  }
+}

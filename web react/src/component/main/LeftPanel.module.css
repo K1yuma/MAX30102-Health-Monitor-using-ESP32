@@ -1,0 +1,52 @@
+.leftPanel {
+  position: fixed;
+  top: 0;
+  left: -340px; /* Start off-screen to the left */
+  width: 300px;
+  height: 100%;
+  background-color: #f0f0f0;
+  transition: left 0.3s ease-in-out; /* Transition 'left' property */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Adjust shadow for left side */
+  z-index: 1001;
+  overflow-y: auto;
+}
+
+.leftPanel.open {
+  left: 0; /* Slide in to the left edge */
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.content {
+  background-color: white;
+  padding: 20px;
+}
+
+.statisticsContent {
+  margin-top: 20px;
+}
+
+.statisticsContent h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.statisticsContent p {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
