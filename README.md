@@ -10,10 +10,17 @@ A full-stack IoT solution for real-time physiological monitoring. This system in
 
 ## 📸 Project Visuals
 
-| System Architecture | Hardware Prototype | Web Dashboard |
-| :---: | :---: | :---: |
-| ![Architecture Diagram](https://github.com/user-attachments/assets/0f440f38-c01d-4efe-82bb-5696d8c49a74) | ![Hardware Setup](https://github.com/user-attachments/assets/1ff6b730-bc63-4397-a6c6-6c0d8eb576d4) | ![Dashboard Screenshot](https://github.com/user-attachments/assets/203598c3-ec82-455f-9df1-c1f4a668dc59) |
-| *High-level data flow* | *ESP32 & MAX30102 integration* | *Real-time analytics UI* |
+### System Architecture
+![Architecture Diagram](https://github.com/user-attachments/assets/0f440f38-c01d-4efe-82bb-5696d8c49a74)
+*High-level data flow showing the integration between ESP32, MQTT, Firebase, and the React Frontend.*
+
+### Hardware Prototype
+![Hardware Setup](https://github.com/user-attachments/assets/1ff6b730-bc63-4397-a6c6-6c0d8eb576d4)
+*The physical assembly featuring the ESP32 development board and the MAX30102 heart rate/SpO2 sensor.*
+
+### Web Dashboard
+![Dashboard Screenshot](https://github.com/user-attachments/assets/203598c3-ec82-455f-9df1-c1f4a668dc59)
+*The responsive React.js dashboard providing real-time health telemetry, historical trends, and alarm notifications.*
 
 ---
 
