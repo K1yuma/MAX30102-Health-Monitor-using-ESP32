@@ -123,6 +123,3 @@ A full-stack IoT solution for real-time physiological monitoring. This system in
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-
-## 👥 Credits
-**Project Team:** Nhom 4
