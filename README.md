@@ -23,31 +23,37 @@ A full-stack IoT solution for real-time physiological monitoring. This system in
 ### Web Dashboard & Data Analytics
 
 **1. Real-Time Monitoring Interface**
+
 ![Dashboard web react](https://github.com/user-attachments/assets/96563865-a24b-42ec-887d-fa163188cab3)
 
 *The primary interface displaying live heart rate and SpO2 telemetry received via MQTT.*
 
 **2. Interactive Data Visualization**
+
 ![Dashboard biểu đồ](https://github.com/user-attachments/assets/25e477a8-93f3-4a3c-9498-ffa53bcaf792)
 
 *Real-time line charts for tracking health metric fluctuations over time.*
 
 **3. Statistical Summarization**
+
 ![Dữ liệu tóm tắt](https://github.com/user-attachments/assets/335265f4-8109-415b-8ed1-5202b6d137a0)
 
 *Automated reporting of key performance indicators, including average, maximum, and minimum values for the session.*
 
 **4. Cloud Logging & Data Export (List View)**
+
 ![Lịch sử dạng danh sách](https://github.com/user-attachments/assets/f700db6f-d3c7-43e5-af25-2c5dbf9c82d4)
 
 *Integration with Firebase Firestore for persistent storage, featuring a list-view history and CSV export functionality.*
 
 **5. Historical Trend Analysis (Graph View)**
+
 ![Lịch sử dạng đồ thị](https://github.com/user-attachments/assets/bc6e09f8-7242-49a2-a06b-64f5ee76e1f4)
 
 *Retrieving and visualizing archived data from Firestore to identify long-term health trends.*
 
 **6. Intelligent Threshold Alerts**
+
 ![Web hiển thị cảnh báo](https://github.com/user-attachments/assets/1ec6d640-04ee-4ab0-a95b-e42c303a0dbf)
 
 *Dynamic UI feedback and visual warnings triggered when physiological metrics exceed safe user-defined ranges.*
