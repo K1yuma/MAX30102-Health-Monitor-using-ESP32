@@ -11,9 +11,8 @@ A full-stack IoT solution for real-time physiological monitoring. This system in
 ## 📸 Project Visuals
 
 ### System Architecture
-![Architecture Diagram](<img width="840" height="1423" alt="image" src="https://github.com/user-attachments/assets/26ca43ba-bd16-45eb-93bb-14637bfe7f19" />
-)
-
+![Architecture Diagram]
+(https://github.com/user-attachments/assets/26ca43ba-bd16-45eb-93bb-14637bfe7f19)
 *High-level data flow showing the integration between ESP32, MQTT, Firebase, and the React Frontend.*
 
 ### Hardware Prototype
