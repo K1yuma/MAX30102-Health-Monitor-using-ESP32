@@ -11,46 +11,45 @@ A full-stack IoT solution for real-time physiological monitoring. This system in
 ## 📸 Project Visuals
 
 ### System Architecture
-![Architecture Diagram]
-(https://github.com/user-attachments/assets/26ca43ba-bd16-45eb-93bb-14637bfe7f19)
+![Architecture Diagram](https://github.com/user-attachments/assets/26ca43ba-bd16-45eb-93bb-14637bfe7f19)
+
 *High-level data flow showing the integration between ESP32, MQTT, Firebase, and the React Frontend.*
 
 ### Hardware Prototype
-![Hardware Setup](<img width="702" height="455" alt="image" src="https://github.com/user-attachments/assets/40bd9e22-2b62-48be-9167-8e030ad53911" />
-)
+![Hardware Setup](https://github.com/user-attachments/assets/40bd9e22-2b62-48be-9167-8e030ad53911)
 
 *The physical assembly featuring the ESP32 development board and the MAX30102 heart rate/SpO2 sensor.*
 
 ### Web Dashboard & Data Analytics
 
 **1. Real-Time Monitoring Interface**
-![Dashboard web react](<img width="731" height="356" alt="image" src="https://github.com/user-attachments/assets/96563865-a24b-42ec-887d-fa163188cab3" />
-)
+![Dashboard web react](https://github.com/user-attachments/assets/96563865-a24b-42ec-887d-fa163188cab3)
+
 *The primary interface displaying live heart rate and SpO2 telemetry received via MQTT.*
 
 **2. Interactive Data Visualization**
-![Dashboard biểu đồ](<img width="716" height="348" alt="image" src="https://github.com/user-attachments/assets/25e477a8-93f3-4a3c-9498-ffa53bcaf792" />
-)
+![Dashboard biểu đồ](https://github.com/user-attachments/assets/25e477a8-93f3-4a3c-9498-ffa53bcaf792)
+
 *Real-time line charts for tracking health metric fluctuations over time.*
 
 **3. Statistical Summarization**
-![Dữ liệu tóm tắt](<img width="218" height="523" alt="image" src="https://github.com/user-attachments/assets/335265f4-8109-415b-8ed1-5202b6d137a0" />
-)
+![Dữ liệu tóm tắt](https://github.com/user-attachments/assets/335265f4-8109-415b-8ed1-5202b6d137a0)
+
 *Automated reporting of key performance indicators, including average, maximum, and minimum values for the session.*
 
 **4. Cloud Logging & Data Export (List View)**
-![Lịch sử dạng danh sách](<img width="510" height="395" alt="image" src="https://github.com/user-attachments/assets/f700db6f-d3c7-43e5-af25-2c5dbf9c82d4" />
-)
+![Lịch sử dạng danh sách](https://github.com/user-attachments/assets/f700db6f-d3c7-43e5-af25-2c5dbf9c82d4)
+
 *Integration with Firebase Firestore for persistent storage, featuring a list-view history and CSV export functionality.*
 
 **5. Historical Trend Analysis (Graph View)**
-![Lịch sử dạng đồ thị](<img width="496" height="359" alt="image" src="https://github.com/user-attachments/assets/bc6e09f8-7242-49a2-a06b-64f5ee76e1f4" />
-)
+![Lịch sử dạng đồ thị](https://github.com/user-attachments/assets/bc6e09f8-7242-49a2-a06b-64f5ee76e1f4)
+
 *Retrieving and visualizing archived data from Firestore to identify long-term health trends.*
 
 **6. Intelligent Threshold Alerts**
-![Web hiển thị cảnh báo](<img width="672" height="325" alt="image" src="https://github.com/user-attachments/assets/1ec6d640-04ee-4ab0-a95b-e42c303a0dbf" />
-)
+![Web hiển thị cảnh báo](https://github.com/user-attachments/assets/1ec6d640-04ee-4ab0-a95b-e42c303a0dbf)
+
 *Dynamic UI feedback and visual warnings triggered when physiological metrics exceed safe user-defined ranges.*
 
 ---
