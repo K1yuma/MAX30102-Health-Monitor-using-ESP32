@@ -113,7 +113,7 @@ A full-stack IoT solution for real-time physiological monitoring. This system in
    ```env
    REACT_APP_FIREBASE_API_KEY=your_key
    REACT_APP_FIREBASE_PROJECT_ID=your_id
-   # ... (see .env.example for full list)
+   # ... (see env.example for full list)
    ```
 4. Start development server: `npm start`.
 
