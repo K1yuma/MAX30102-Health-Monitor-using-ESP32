@@ -12,7 +12,7 @@ A full-stack IoT solution for real-time physiological monitoring. This system in
 
 | System Architecture | Hardware Prototype | Web Dashboard |
 | :---: | :---: | :---: |
-| ![Architecture Diagram](https://github.com/user-attachments/assets/0f440f38-c01d-4efe-82bb-5696d8c49a74) | ![Hardware Setup](https://via.placeholder.com/400x250?text=Hardware+Setup+Photo) | ![Dashboard Screenshot](https://via.placeholder.com/400x250?text=React+Dashboard+Screenshot) |
+| ![Architecture Diagram](https://github.com/user-attachments/assets/0f440f38-c01d-4efe-82bb-5696d8c49a74) | ![Hardware Setup](https://github.com/user-attachments/assets/1ff6b730-bc63-4397-a6c6-6c0d8eb576d4) | ![Dashboard Screenshot](https://github.com/user-attachments/assets/203598c3-ec82-455f-9df1-c1f4a668dc59) |
 | *High-level data flow* | *ESP32 & MAX30102 integration* | *Real-time analytics UI* |
 
 ---
